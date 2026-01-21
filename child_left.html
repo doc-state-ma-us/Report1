@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Massachusetts State Police (MSP) – Workforce Diversity Narrative</title>
+  <meta name="description" content="MSP: general trends and focus-area deep dives (Minority, Female, Veterans)." />
+
+  <style>
+    :root{
+      /* Match parent theme */
+      --bg:#071522;
+      --panel:#071b2a;
+      --panel2:#062033;
+
+      --text:#e7eefc;
+      --muted:#a9b7d6;
+      --line:rgba(255,255,255,.10);
+
+      --accent:#11c6ff;
+      --accent2:#1089b7;
+      --accent3:#045072;
+
+      --warn:#ffcc66;
+      --bad:#ff6b6b;
+
+      --radius:18px;
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --shadow2: 0 12px 30px rgba(0,0,0,.35);
+      --maxw: 1080px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1100px 700px at 18% 0%, rgba(17,198,255,.20), transparent 60%),
+        radial-gradient(900px 600px at 92% 10%, rgba(19,177,231,.14), transparent 58%),
+        radial-gradient(1100px 700px at 50% 115%, rgba(16,137,183,.10), transparent 55%),
+        linear-gradient(180deg, #071522 0%, #06101c 42%, #04080f 100%);
+      overflow-x:hidden;
+    }
+
+    /* Top progress bar */
+    .progress{
+      position:fixed; top:0; left:0; height:4px; width:0%;
+      background: linear-gradient(90deg, #045072 0%, #1089b7 45%, #11c6ff 100%);
+      z-index:9999;
+      box-shadow:0 0 18px rgba(110,168,254,.45);
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(7,16,34,.85) 0%, rgba(7,16,34,.55) 70%, rgba(7,16,34,0) 100%);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width:240px;
+    }
+    .logo{
+      width:34px; height:34px;
+      border-radius:10px;
+      object-fit:cover;
+      display:block;
+      box-shadow: 0 10px 30px rgba(110,168,254,.25);
+    }
+    .brand h1{
+      font-size:14px; line-height:1.2; margin:0;
+      letter-spacing:.2px;
+    }
+    .brand p{
+      margin:2px 0 0 0;
+      font-size:12px; color:var(--muted);
+    }
+
+    .links{
+      display:flex; gap:10px; flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+    .links a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:12px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+      transition: all .2s ease;
+    }
+    .links a:hover{
+      color:var(--text);
+      border-color:var(--line);
+      background: rgba(255,255,255,.03);
+    }
+
+    .ctaBtn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.2px;
+      padding:9px 12px;
+      border-radius:999px;
+      color: var(--text);
+      border: 1px solid rgba(17,198,255,.45);
+      background: linear-gradient(90deg, rgba(4,80,114,.28), rgba(17,198,255,.18));
+      box-shadow: 0 10px 28px rgba(17,198,255,.12);
+      position:relative;
+      overflow:hidden;
+      transform: translateZ(0);
+      white-space:nowrap;
+    }
+    .ctaBtn:hover{
+      border-color: rgba(17,198,255,.75);
+      box-shadow: 0 16px 36px rgba(17,198,255,.18);
+      transform: translateY(-1px);
+    }
+    .ctaDot{
+      width:9px; height:9px;
+      border-radius:999px;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(17,198,255,.85);
+      animation: pulse 1.25s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%{ transform: scale(1); opacity:.65; }
+      50%{ transform: scale(1.35); opacity:1; }
+      100%{ transform: scale(1); opacity:.65; }
+    }
+
+    /* Focus buttons block */
+    .focusRow{
+      max-width:var(--maxw);
+	  margin: 0 auto;
+	  padding: 0 18px;
+	  position:relative;
+	  display:flex;
+	  flex-wrap:wrap;
+	  gap:10px;
+	  margin-top:10px;
+	  justify-content:center; 
+    }
+    .focusBtn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(17,198,255,.35);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      text-decoration:none;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.2px;
+      transition: all .2s ease;
+    }
+    .focusBtn:hover{
+      border-color: rgba(17,198,255,.75);
+      box-shadow: 0 16px 36px rgba(17,198,255,.14);
+      transform: translateY(-1px);
+    }
+    .focusBtn .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(17,198,255,.65);
+      flex: 0 0 auto;
+    }
+
+    /* Sections */
+    main{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding: 0 18px 70px;
+    }
+    section{
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(15,26,48,.55), rgba(12,22,43,.30));
+      box-shadow: var(--shadow2);
+      position:relative;
+      overflow:hidden;
+      scroll-margin-top: 92px;
+    }
+    section:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(820px 320px at 12% 0%, rgba(110,168,254,.12), transparent 58%);
+      pointer-events:none;
+    }
+
+    .secHeader{
+      position:relative;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:14px;
+    }
+    .secHeader h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-.2px;
+    }
+    .pill{
+      margin-top:2px;
+      font-size:11px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background: rgba(255,255,255,.03);
+      white-space:nowrap;
+    }
+
+    .grid{
+      position:relative;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    .text{
+      color:var(--text);
+      line-height:1.65;
+      font-size:14px;
+    }
+    .text p{margin: 0 0 12px 0}
+    .text .muted{color:var(--muted)}
+    .text h3{
+      margin: 14px 0 8px 0;
+      font-size: 14px;
+      letter-spacing: -.1px;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
+
+    .callout{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px 14px 12px;
+      background: rgba(255,255,255,.03);
+      margin-top:12px;
+    }
+    .callout ul{
+      margin:8px 0 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .imgCard{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.02);
+      overflow:hidden;
+    }
+    .imgCard img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:16px;
+      cursor: zoom-in;
+    }
+    .imgCaption{
+      padding:10px 12px 12px;
+      font-size:12px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      background: rgba(0,0,0,.15);
+    }
+
+    /* Lightbox */
+    .lightbox{
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(10px);
+    }
+    .lightbox.show{ display:flex; }
+    .lightbox img{
+      max-width: min(92vw, 1200px);
+      max-height: 88vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 18px;
+      box-shadow: 0 30px 90px rgba(0,0,0,.7);
+      cursor: zoom-out;
+    }
+    .lightbox .hint{
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      color: rgba(255,255,255,.75);
+    }
+
+    /* Reveal */
+    .reveal{
+      opacity:0;
+      transform: translateY(10px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .reveal.show{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* Floating “Back to chooser” button */
+    .toChooser{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 999;
+      display:none;
+    }
+    .toChooser.show{ display:block; }
+  </style>
+</head>
+
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <img src="logo_child_left.png" alt="MSP logo" class="logo" />
+        <div>
+          <h1>Massachusetts State Police (MSP)</h1>
+          <p>Workforce diversity story (2022–2025)</p>
+        </div>
+      </div>
+
+      <nav class="links" aria-label="Top navigation">
+        <a class="ctaBtn" href="index.html">
+          <span class="ctaDot" aria-hidden="true"></span>
+          Back to Main Page
+          <span aria-hidden="true">→</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: GENERAL -->
+    <section id="s1" class="reveal">
+      <div class="secHeader">
+        <h2>General Trends (Female, Minority, Veterans)</h2>
+        <span class="pill">Trend scan</span>
+      </div>
+
+      <div class="grid">
+        <div class="imgCard">
+          <img src="childA_general_trend.png" alt="Line chart: Female, Minority, and Veteran headcount over time" />
+          <div class="imgCaption">General headcount trends (Female, Minority, Veterans).</div>
+        </div>
+
+        <div class="text">
+          <p><strong>What’s happening in Massachusetts State Police (MSP)?</strong></p>
+
+
+          <div class="callout">
+          
+            <ul>
+              <li><strong>Female</strong> trend appears to increase steadily.</li>
+              <li><strong>Minority</strong> trend shows a strong upward movement.</li>
+              <li><strong>Veterans</strong> trend appears to decline gradually.</li>
+            </ul>
+          </div>
+		  
+		  
+		  <p class="muted" style="margin-top:12px;">
+            The overall trend pattern resemble with the EOPSS.
+          </p>
+			
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CHOOSER -->
+    <div class="focusRow" id="chooser" aria-label="Choose an analysis">
+      <a class="focusBtn" href="#s2"><span class="dot"></span>Minority</a>
+      <a class="focusBtn" href="#s3"><span class="dot"></span>Female</a>
+      <a class="focusBtn" href="#s4"><span class="dot"></span>Veterans</a>
+    </div>
+
+    <!-- SECTION 2: MINORITY -->
+    <section id="s2" class="reveal">
+      <div class="secHeader">
+        <h2>Minority Analysis</h2>
+        <span class="pill">Deep dive</span>
+      </div>
+
+      <!-- SS1 -->
+      <div class="grid">
+        <div class="imgCard">
+          <img src="MSP_image2.png" alt="Bar chart: Minority distribution by race over time (MSP)" />
+          <div class="imgCaption">Minority distribution by race (2022–2025.</div>
+        </div>
+
+        <div class="text">
+          <p><strong>1) Minority distribution by race</strong></p>
+          <p>
+            This bar chart explains the upward trajectory in Minority representation that we observed earlier.
+            Across MSP, <strong>most racial groups show positive upward movement over time</strong>.
+          </p>
+
+          <div class="callout">
+            <strong>What this suggests:</strong>
+            <ul>
+              <li>Minority representation is increasing across multiple race categories.</li>
+              <li>Compared to the broader EOPSS trend for <strong>Black</strong>, <strong>Hispanic</strong>, and <strong>Asian</strong> groups, the MSP pattern appears stronger.</li>
+              <li>This raises a key question: <strong>why was there a sharp jump between 2023 and 2024</strong> that we did not see at the EOPSS level?</li>
+            </ul>
+          </div>
+
+          <p class="muted" style="margin-top:12px;">
+            To explain the jump and check whether growth is consistent, we look at the year-over-year change.
+          </p>
+        </div>
+      </div>
+
+      <!-- SS2 -->
+      <div class="grid" style="margin-top:18px;">
+        <div class="text">
+          <p><strong>2) Growth in numbers (year-over-year change)</strong></p>
+          <p>
+            The heat map breaks down net change by race across three year window. This provides the
+            clearest answer to the question: <strong>where did the 2023→2024 jump come from?</strong>
+			
+          </p>
+		  <p><strong>Ans:</strong> The 2023→2024 jump is primarily driven by Hispanic growth.</p>
+
+          <div class="callout">
+            <strong>What the heat map reveals:</strong>
+            <ul>
+              
+              <li><strong>Growth rate decreases in the most recent year (2024→2025).</strong></li>
+              <li><strong>Growth is not uniform</strong> across racial groups, some groups accelerate while others slow.</li>
+              <li>The most broadly distributed (“most diverse”) growth occurred in <strong>2022→2023</strong>.</li>
+            </ul>
+          </div>
+
+          <p style="margin-top:12px;">
+            On the bigger picture, <strong>changes in minority growth patterns</strong> may reflect differences in
+            outreach focus, engagement, or pipeline effectiveness across time.
+          </p>
+
+          <p class="muted">
+            Key question: <strong>Can we combine the best efforts together</strong> to drive balanced, sustained minority growth?
+          </p>
+        </div>
+
+        <div class="imgCard">
+          <img src="MSP_image3.png" alt="Heat map: Growth in numbers by race and year range (MSP)" />
+          <div class="imgCaption">Net change by race (2022 - 2025).</div>
+        </div>
+      </div>
+
+      <!-- SS3 -->
+      <div class="grid" style="margin-top:18px;">
+        <div class="imgCard">
+          <img src="MSP_image4.png" alt="Horizontal bar chart: Minority representation by EEO Job Category (MSP)" />
+          <div class="imgCaption">Minority representation by EEO Job Category.</div>
+        </div>
+
+        <div class="text">
+          <p><strong>3) Minority representation by EEO Job Category</strong></p>
+          <p>
+            This view shows how minority representation is distributed across EEO job categories. It helps answer:
+            <strong>where does minority representation concentrate</strong> and where might additional outreach be needed.
+          </p>
+
+          <div class="callout">
+            <strong>How to read this:</strong>
+            <ul>
+              <li>Across all years, minority representation is dominated by four EEO job categories: <strong>Protective Service, Professionals, Officials and Administrators, Protective Service: Non-Sworn</strong></li>
+			
+              <li>Categories exhibit flat or declining patterns across years: <strong>Technicians, Service Maintenance, Office/Clerical</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SS4 -->
+      <div class="grid" style="margin-top:18px;">
+        <div class="text">
+          <p><strong>4) Job description drill-down (top categories)</strong></p>
+          <p>
+            After identifying the top EEO job categories, we zoom into job descriptions to understand which roles
+            are driving the category totals.
+          </p>
+
+          <div class="callout">
+            <strong>Quick note:</strong>
+            <ul>
+              <li>State police troper stood on top.</li>
+              
+            </ul>
+          </div>
+
+          
+        </div>
+
+        <div class="imgCard">
+          <img src="MSP_image5.png" alt="Multiple charts: Minority representation by job description within top EEO categories (MSP)" />
+          <div class="imgCaption">Job description drill-down for top EEO job categories.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FEMALE (placeholder) -->
+    <section id="s3" class="reveal">
+      <div class="secHeader">
+        <h2>Female Analysis</h2>
+        <span class="pill">Deep dive</span>
+      </div>
+
+    </section>
+
+    <!-- SECTION 4: VETERANS (placeholder) -->
+    <section id="s4" class="reveal">
+      <div class="secHeader">
+        <h2>Veterans Analysis</h2>
+        <span class="pill">Deep dive</span>
+      </div>
+
+      
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img id="lightboxImg" alt="Expanded chart" />
+    <div class="hint">Click anywhere (or press ESC) to close</div>
+  </div>
+
+  <!-- Floating back-to-chooser -->
+  <a class="ctaBtn toChooser" id="toChooser" href="#chooser">
+    <span class="ctaDot" aria-hidden="true"></span>
+    Back to section chooser
+    <span aria-hidden="true">↑</span>
+  </a>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, "", id);
+      });
+    });
+
+    // Progress bar
+    const progress = document.getElementById('progress');
+    function updateProgress(){
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop || document.body.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      const p = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      progress.style.width = p.toFixed(2) + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    // Reveal-on-scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Lightbox zoom for images in .imgCard
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    document.querySelectorAll('.imgCard img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('show');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox(){
+      lightbox.classList.remove('show');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+    lightbox.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('show')) closeLightbox();
+    });
+
+    // Floating “Back to chooser” appears after some scroll
+    const toChooser = document.getElementById('toChooser');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 650) toChooser.classList.add('show');
+      else toChooser.classList.remove('show');
+    }, { passive: true });
+  </script>
+</body>
+</html>
