@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Female Workforce Analysis (2022–2025)</title>
-  <meta name="description" content="A slide-style narrative for female workforce trends and breakdowns (2022–2025)." />
+  <title>Veteran Workforce Analysis (2022–2025)</title>
+  <meta name="description" content="A slide-style narrative for veteran workforce trends (2022–2025)." />
 
   <style>
     :root{
@@ -177,76 +177,6 @@
     .callout h3{margin:0 0 8px 0; font-size:13px}
     .callout ul{margin:0; padding-left:18px; color:var(--muted); line-height:1.55; font-size:13px}
 
-    	.ctaWrap{
-        margin-top: 18px;
-        display:flex;
-        justify-content:center;
-      }
-
-      .ctaBtn{
-	  display:inline-flex;
-	  align-items:center;
-	  gap:10px;
-	  text-decoration:none;
-	  font-size:13px;
-	  font-weight:700;
-	  letter-spacing:.2px;
-	  padding:12px 16px;
-	  border-radius:999px;
-	  color: var(--text);
-	  border: 1px solid rgba(17,198,255,.45);
-	  background: linear-gradient(90deg, rgba(4,80,114,.28), rgba(17,198,255,.18));
-	  box-shadow: 0 10px 28px rgba(17,198,255,.18);
-	  position:relative;
-	  overflow:hidden;
-	  transform: translateZ(0);
-	}
-
-	.ctaBtn:before{
-	  content:"";
-	  position:absolute;
-	  inset:-2px;
-	  background: radial-gradient(260px 120px at 25% 0%, rgba(17,198,255,.28), transparent 65%);
-	  opacity:.9;
-	  pointer-events:none;
-	}
-
-	.ctaBtn:hover{
-	  border-color: rgba(17,198,255,.75);
-	  box-shadow: 0 16px 36px rgba(17,198,255,.24);
-	  transform: translateY(-1px);
-	}
-
-    .imgCard{
-      border:1px solid var(--line);
-      border-radius:16px;
-      background: rgba(255,255,255,.02);
-      overflow:hidden;
-    }
-    .imgCard img{
-      width:100%;
-      height:auto;
-      display:block;
-      cursor: zoom-in;
-    }
-    .imgCaption{
-      padding:10px 12px 12px;
-      font-size:12px;
-      color:var(--muted);
-      border-top:1px solid var(--line);
-      background: rgba(0,0,0,.18);
-    }
-
-    /* Two images side-by-side */
-    .twoUp{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    @media (max-width: 980px){
-      .twoUp{grid-template-columns:1fr}
-    }
-
     .pillRow{
       display:flex; gap:8px; flex-wrap:wrap; margin-top:8px;
     }
@@ -268,6 +198,26 @@
       margin-top:14px;
       font-size:12px;
       color:rgba(255,255,255,.70);
+    }
+
+    .imgCard{
+      border:1px solid var(--line);
+      border-radius:16px;
+      background: rgba(255,255,255,.02);
+      overflow:hidden;
+    }
+    .imgCard img{
+      width:100%;
+      height:auto;
+      display:block;
+      cursor: zoom-in;
+    }
+    .imgCaption{
+      padding:10px 12px 12px;
+      font-size:12px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      background: rgba(0,0,0,.18);
     }
 
     /* Lightbox overlay */
@@ -306,16 +256,16 @@
   <header>
     <div class="nav">
       <div class="brand">
+        <!-- ✅ update logo if needed -->
         <img src="logo_parent.png" alt="Organization logo" class="logo" />
         <div>
-          <h1>EOPSS Female Workforce Analysis</h1>
+          <h1>EOPSS Veteran Workforce Analysis</h1>
           <p>Quarter 4 • 2022–2025</p>
         </div>
       </div>
 
       <div class="actions">
         <a class="btn" href="./index.html">← Back to main report</a>
-        <!-- Later you can add more buttons here -->
         <a class="btn primary" href="#slide1">Start</a>
       </div>
     </div>
@@ -323,175 +273,56 @@
 
   <div class="deck">
 
-
-
-    <!-- SLIDE 2 -->
-    <section class="slide" id="slide2">
-      <div class="wrap">
-        <div class="content">
-          <div>
-            <h2 class="title">Female Headcount is Increasing Each Year</h2>
-            <p class="sub">
-              From 2022 → 2025, the total number of female employees increases steadily year over year.
-            </p>
-
-            <div class="callout">
-              <h3>What this means</h3>
-              <ul>
-                <li>The trend is consistently upward, not flat.</li>
-                <li>This suggests progress in either hiring, retention, or both.</li>
-              </ul>
-            </div>
-
-            <div class="pillRow">
-              <span class="pill">Trend</span>
-              <span class="pill dark">Year-over-year growth</span>
-            </div>
-          </div>
-
-          <div class="imgCard">
-            <img src="female_2_female_headcount_trend.png" alt="Line chart: Total female headcount by year" />
-            <div class="imgCaption">Total female headcount by year (2022–2025).</div>
-          </div>
-        </div>
-      </div>
-    </section>    
     <!-- SLIDE 1 -->
     <section class="slide" id="slide1">
       <div class="wrap">
         <div class="content">
           <div>
-            <h2 class="title">Gender Representation: Male vs Female</h2>
+            <h2 class="title">Veteran Representation: Headcount + Workforce Share</h2>
             <p class="sub">
-              Simple snapshot of the workforce split. This sets the baseline before we look at changes over time and where female representation is concentrated.
+              This chart combines two views: <strong>veteran headcount</strong> (bars) and
+              <strong>veterans as a % of total workforce</strong> (line). 
+              <li>Percentage decline confirms veteran representation is shrinking relative to the total.</li>
             </p>
 
-            <!-- ✅ Update these 3 numbers if needed -->
+            <!-- ✅ Numbers taken from your chart -->
             <div class="kpis">
               <div class="kpi">
-                <div class="label">Total Employees (2025)</div>
-                <div class="value">8,444</div>
-                <div class="note">All employees (Q4)</div>
+                <div class="label">Veterans (2022)</div>
+                <div class="value">1,185</div>
+                <div class="note">≈ 14.4% of workforce</div>
               </div>
               <div class="kpi">
-                <div class="label">Total Females (2025)</div>
-                <div class="value">2,198</div>
-                <div class="note">≈ 26.0% of workforce</div>
+                <div class="label">Veterans (2025)</div>
+                <div class="value">1,057</div>
+                <div class="note">≈ 12.5% of workforce</div>
               </div>
               <div class="kpi">
-                <div class="label">Total Males (2025)</div>
-                <div class="value">6,246</div>
-                <div class="note">≈ 74.0% of workforce</div>
+                <div class="label">Change (2022 → 2025)</div>
+                <div class="value">-128</div>
+                <div class="note">Headcount decrease</div>
               </div>
               <div class="kpi">
-                <div class="label">Key takeaway</div>
-                <div class="value">1 in 4</div>
-                <div class="note">Employees are female</div>
+                <div class="label">Change in share</div>
+                <div class="value">-1.9 percentage point</div>
+                <div class="note">14.4% → 12.5%</div>
               </div>
             </div>
 
-            <div class="pillRow">
-              <span class="pill">Baseline view</span>
-              <span class="pill dark">Click charts to zoom</span>
-              <span class="pill dark">Scroll for next panel</span>
-            </div>
 
-            <div class="scrollHint">Scroll ↓ to continue</div>
+
+            
           </div>
 
           <div class="imgCard">
-            <img src="female_1_gender_donut.png" alt="Donut chart showing male vs female representation" />
-            <div class="imgCaption">Gender representation split (Male vs Female).</div>
+            <!-- ✅ IMPORTANT: rename this file to match your saved image -->
+            <img src="veteran_1_representation_2022_2025.png" alt="Bar + line chart showing veteran headcount and percent of workforce (2022–2025)" />
+            <div class="imgCaption">Veteran headcount (bars) and % of total workforce (line), 2022–2025.</div>
           </div>
         </div>
       </div>
     </section>
 
-
-
-    <!-- SLIDE 3 -->
-    <section class="slide" id="slide3">
-      <div class="wrap">
-        <div class="content">
-          <div>
-            <h2 class="title">Where Female Employees Are Concentrated</h2>
-            <p class="sub">
-              Female representation is broadly distributed across all sectors, with a commanding presence in the Professional and Protective Service: Sworn categories.
-            </p>
-
-            <div class="callout">
-              <h3>EOPSS Female EEO Job Category counts (2025)</h3>
-              <ul>
-                <li>Professionals: <strong>834</strong></li>
-                <li>Protective Service: Sworn: <strong>625</strong></li>
-                <li>Officials and Administrators: <strong>307</strong></li>
-                <li>Office/Clerical: <strong>224</strong></li>
-                <li>Protective Service: Non-Sworn: <strong>113</strong></li>
-                <li>Technicians: <strong>64</strong></li>
-                <li>Service Maintenance: <strong>15</strong></li>
-                <li>No EEO Reporting: <strong>13</strong></li>
-                <li>Skilled Craft: <strong>1</strong></li>
-              </ul>
-            </div>
-
-            <div class="pillRow">
-              <span class="pill">Category breakdown</span>
-              <span class="pill dark">Concentration effect</span>
-            </div>
-          </div>
-
-          <div class="imgCard">
-            <img src="female_3_eeo_category.png" alt="Bar chart: Female representation by EEO job category" />
-            <div class="imgCaption">Female headcount by EEO job category.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 4 -->
-    <section class="slide" id="slide4">
-      <div class="wrap">
-        <div class="content" style="grid-template-columns: 1fr;">
-          <div>
-            <h2 class="title">Race Comparison: Majority vs Minority View</h2>
-            <p class="sub">
-              First chart shows the full race distribution (majority + minority). The second chart zooms into minority groups only for clearer comparison.
-            </p>
-
-            <div class="twoUp" style="margin-top:14px;">
-              <div class="imgCard">
-                <img src="female_4_race_all.png" alt="Bar chart: Employee distribution by race and year (full view)" />
-                <div class="imgCaption">Full view: race distribution by year (includes majority).</div>
-              </div>
-              <div class="imgCard">
-                <img src="female_5_race_minority_only.png" alt="Bar chart: Employee distribution by race and year (minority-only view)" />
-                <div class="imgCaption">Minority-only view: clearer trend comparison.</div>
-              </div>
-            </div>
-
-            <div class="callout" style="margin-top:14px;">
-              <h3>Female vs Male minority trend</h3>
-              <ul>
-                <li>Black / Hispanic / Asian trends look similar to the overall pattern.</li>
-                <li><strong>Two or More Races</strong> appears stronger in female representation as compared to the previous analsysis of overall minorities.</li>
-               
-              </ul>
-            </div>
-
-            <div class="pillRow">
-              <span class="pill">Majority vs minority</span>
-            </div>
-          </div>
-        </div>
-        <div class="ctaWrap">
-		  <a class="ctaBtn" href="veteran.html" target="_blank" rel="noopener">
-			<span class="ctaDot" aria-hidden="true"></span>
-			View EOPSS Veteran Workforce Report
-			<span aria-hidden="true">→</span>
-		  </a>
-		</div>
-      </div>
-    </section>
 
   </div>
 

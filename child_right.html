@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Massachusetts State Police (MSP) – Workforce Diversity Narrative</title>
-  <meta name="description" content="MSP: general trends and focus-area deep dives (Minority, Female, Veterans)." />
+  <title>Department of Correction (DOC) – Workforce Diversity Narrative</title>
+  <meta name="description" content="DOC: general trends and focus-area deep dives (Minority, Female, Veterans)." />
 
   <style>
     :root{
-      /* Match parent theme */
+      /* Theme */
       --bg:#071522;
       --panel:#071b2a;
       --panel2:#062033;
@@ -21,11 +21,7 @@
       --accent2:#1089b7;
       --accent3:#045072;
 
-      --warn:#ffcc66;
-      --bad:#ff6b6b;
-
       --radius:18px;
-      --shadow: 0 18px 55px rgba(0,0,0,.45);
       --shadow2: 0 12px 30px rgba(0,0,0,.35);
       --maxw: 1080px;
     }
@@ -91,20 +87,6 @@
       justify-content:flex-end;
       align-items:center;
     }
-    .links a{
-      color:var(--muted);
-      text-decoration:none;
-      font-size:12px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid transparent;
-      transition: all .2s ease;
-    }
-    .links a:hover{
-      color:var(--text);
-      border-color:var(--line);
-      background: rgba(255,255,255,.03);
-    }
 
     .ctaBtn{
       display:inline-flex;
@@ -124,6 +106,7 @@
       overflow:hidden;
       transform: translateZ(0);
       white-space:nowrap;
+      cursor:pointer;
     }
     .ctaBtn:hover{
       border-color: rgba(17,198,255,.75);
@@ -143,85 +126,7 @@
       100%{ transform: scale(1); opacity:.65; }
     }
 
-    /* Accordion / expandable focus cards */
-    .accordion{
-      max-width: var(--maxw);
-      margin: 14px auto 0;
-      padding: 0 18px;
-      display: grid;
-      gap: 14px;
-    }
-
-    .panel{
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: linear-gradient(180deg, rgba(15,26,48,.60), rgba(12,22,43,.25));
-      box-shadow: var(--shadow2);
-      overflow: hidden;
-    }
-
-    .panelHead{
-      width: 100%;
-      cursor: pointer;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 14px;
-      padding: 18px 18px;
-      background: radial-gradient(900px 280px at 12% 0%, rgba(17,198,255,.14), transparent 62%);
-      border: 0;
-      color: var(--text);
-      text-align: left;
-    }
-
-    .panelHead h3{
-      margin: 0;
-      font-size: 20px;
-      letter-spacing: -.2px;
-    }
-
-    .panelHead .tag{
-      font-size: 12px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      color: var(--muted);
-      background: rgba(255,255,255,.03);
-    }
-
-    .panelBody{
-      display: none;
-      padding: 16px 18px 18px;
-    }
-
-    .panelBody.show{ display:block; }
-
-    .minBtnRow{
-      margin-top: 14px;
-      display:flex;
-      justify-content:flex-end;
-    }
-    .minBtn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-size:12px;
-      font-weight:800;
-      padding:9px 12px;
-      border-radius:999px;
-      color: var(--text);
-      border: 1px solid rgba(17,198,255,.35);
-      background: rgba(255,255,255,.03);
-      text-decoration:none;
-      cursor:pointer;
-    }
-    .minBtn:hover{
-      border-color: rgba(17,198,255,.75);
-      box-shadow: 0 16px 36px rgba(17,198,255,.14);
-      transform: translateY(-1px);
-    }
-
-    /* Sections */
+    /* Main sections */
     main{
       max-width:var(--maxw);
       margin:0 auto;
@@ -284,9 +189,18 @@
       color:var(--text);
       line-height:1.65;
       font-size:14px;
+      position:relative;
     }
     .text p{margin: 0 0 12px 0}
     .text .muted{color:var(--muted)}
+    .text h3{
+      margin: 14px 0 8px 0;
+      font-size: 14px;
+      letter-spacing: -.1px;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
 
     .callout{
       border:1px solid var(--line);
@@ -322,6 +236,79 @@
       color:var(--muted);
       border-top:1px solid var(--line);
       background: rgba(0,0,0,.15);
+    }
+
+    /* Accordion / expandable focus cards */
+    .accordion{
+      max-width: var(--maxw);
+      margin: 14px auto 0;
+      padding: 0 18px;
+      display: grid;
+      gap: 14px;
+    }
+    .panel{
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(15,26,48,.60), rgba(12,22,43,.25));
+      box-shadow: var(--shadow2);
+      overflow: hidden;
+    }
+    .panelHead{
+      width: 100%;
+      cursor: pointer;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+      padding: 18px 18px;
+      background: radial-gradient(900px 280px at 12% 0%, rgba(17,198,255,.14), transparent 62%);
+      border: 0;
+      color: var(--text);
+      text-align: left;
+    }
+    .panelHead h3{
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: -.2px;
+    }
+    .panelHead .tag{
+      font-size: 12px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: rgba(255,255,255,.03);
+      white-space:nowrap;
+    }
+    .panelBody{
+      display: none;
+      padding: 16px 18px 18px;
+    }
+    .panelBody.show{ display:block; }
+
+    .minBtnRow{
+      margin-top: 14px;
+      display:flex;
+      justify-content:flex-end;
+    }
+    .minBtn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size:12px;
+      font-weight:800;
+      padding:9px 12px;
+      border-radius:999px;
+      color: var(--text);
+      border: 1px solid rgba(17,198,255,.35);
+      background: rgba(255,255,255,.03);
+      text-decoration:none;
+      cursor:pointer;
+    }
+    .minBtn:hover{
+      border-color: rgba(17,198,255,.75);
+      box-shadow: 0 16px 36px rgba(17,198,255,.14);
+      transform: translateY(-1px);
     }
 
     /* Lightbox */
@@ -366,7 +353,7 @@
       transform: translateY(0);
     }
 
-    /* Floating “Back to chooser” button */
+    /* Floating “Back to chooser” */
     .toChooser{
       position: fixed;
       right: 18px;
@@ -384,9 +371,10 @@
   <header>
     <div class="nav">
       <div class="brand">
-        <img src="logo_child_left.png" alt="MSP logo" class="logo" />
+        <!-- Optional: replace with DOC logo file if you have one -->
+        <img src="logo_child_right.png" alt="DOC logo" class="logo" />
         <div>
-          <h1>Massachusetts State Police (MSP)</h1>
+          <h1>Department of Correction (DOC)</h1>
           <p>Workforce diversity story (2022–2025)</p>
         </div>
       </div>
@@ -402,7 +390,7 @@
   </header>
 
   <main>
-    <!-- SECTION 1: GENERAL -->
+    <!-- SECTION 1: OVERALL TREND -->
     <section id="s1" class="reveal">
       <div class="secHeader">
         <h2>General Trends (Female, Minority, Veterans)</h2>
@@ -411,23 +399,23 @@
 
       <div class="grid">
         <div class="imgCard">
-          <img src="childA_general_trend.png" alt="Line chart: Female, Minority, and Veteran headcount over time" />
-          <div class="imgCaption">General headcount trends (Female, Minority, Veterans).</div>
+          <img src="DOC-image1.png" alt="Line chart: Female, Minority, and Veteran headcount over time (DOC)" />
+          <div class="imgCaption">Overall headcount trend (Female, Minority, Veterans) — DOC (2022–2025).</div>
         </div>
 
         <div class="text">
-          <p><strong>What’s happening in Massachusetts State Police (MSP)?</strong></p>
+          <p><strong>What’s happening in DOC overall?</strong></p>
 
           <div class="callout">
             <ul>
-              <li><strong>Female</strong> trend appears to increase steadily.</li>
-              <li><strong>Minority</strong> trend shows a strong upward movement.</li>
-              <li><strong>Veterans</strong> trend appears to decline gradually.</li>
+              <li><strong>Female headcount</strong> remains relatively stable with a modest upward movement over time.</li>
+              <li><strong>Minority headcount</strong> shows a steady upward trajectory between 2022 and 2025.</li>
+              <li><strong>Veteran headcount</strong> declines year over year, and the share of the workforce also drops.</li>
             </ul>
           </div>
 
           <p class="muted" style="margin-top:12px;">
-            The overall trend pattern resemble with the EOPSS.
+            Next, we deep dive into Minority, Female, and Veterans to understand what is driving these patterns.
           </p>
         </div>
       </div>
@@ -436,36 +424,37 @@
     <!-- EXPANDABLE FOCUS CARDS (below General Trends) -->
     <div class="accordion" id="chooser">
 
-      <!-- Veterans -->
+
+
+      <!-- VETERANS -->
       <div class="panel" id="panel-vets">
         <button class="panelHead" type="button" data-target="body-vets">
           <h3>Veterans Analysis</h3>
           <span class="tag">Deep dive</span>
         </button>
+
         <div class="panelBody" id="body-vets">
-          <!-- Placeholder for now -->
           <div class="grid">
             <div class="imgCard">
-              <img src="MSP_V_image8.png" alt="Bar and line chart: Veteran headcount and percent of workforce (2022–2025)" />
-              <div class="imgCaption">Veteran headcount (bars) and veteran share of total workforce (line), 2022–2025.</div>
+              <img src="DOC-image7.png" alt="Bars and line: Veteran headcount and percent of workforce (DOC)" />
+              <div class="imgCaption">Veteran headcount (bars) and % of total workforce (line), 2022–2025.</div>
             </div>
 
             <div class="text">
-              <p><strong>Veteran representation trend (2022–2025)</strong></p>
-
+              <p><strong>What we observe (2022–2025)</strong></p>
               <p>
-                This view tracks both <strong>veteran headcount</strong> and <strong>veterans as a share of the total workforce</strong>.
-                Both measures decline steadily from 2022 to 2025.
+                The combined chart shows a consistent decline in both veteran headcount and the veteran share of the workforce.
               </p>
 
               <div class="callout">
-                <strong>Key takeaways:</strong>
+                <strong>Key observations:</strong>
                 <ul>
-                  <li><strong>Veteran headcount declines:</strong> 488 → 479 → 459 → 428.</li>
-                  <li><strong>Veteran share drops:</strong> 16.9% → 16.0% → 14.2% → 13.3%.</li>
-                  <li><strong>Overall implication:</strong> it’s not just a headcount drop - veterans are becoming a smaller share of the workforce, meaning overall workforce growth (or shifts in hiring) is outpacing veteran presence.</li>
-                </ul>
+                  <li><strong>Veteran headcount declines</strong> year over year.</li>
+                  <li><strong>Veteran % of workforce also drops</strong>, indicating the decline is not only due to workforce growth.</li>
+                 </ul>
               </div>
+
+
             </div>
           </div>
 
@@ -474,41 +463,40 @@
           </div>
         </div>
       </div>
-      <!-- Female -->
+
+      <!-- FEMALE -->
       <div class="panel" id="panel-female">
         <button class="panelHead" type="button" data-target="body-female">
           <h3>Female Analysis</h3>
           <span class="tag">Deep dive</span>
         </button>
+
         <div class="panelBody" id="body-female">
-          <!-- Placeholder for now -->
           <div class="grid">
             <div class="imgCard">
-              <img src="MSP_F_image7.png" alt="Donut charts: Male vs Female headcount by year (2022–2025)" />
-              <div class="imgCaption">Male vs Female headcount and share by year (2022–2025).</div>
+              <img src="DOC-image6.png" alt="Donut charts: Male vs Female headcount by year (DOC)" />
+              <div class="imgCaption">Female representation (Male vs Female) by year (2022–2025).</div>
             </div>
 
             <div class="text">
-
+              <p><strong>What we observe (2022–2025)</strong></p>
               <p>
-                Across MSP, <strong>female headcount increases each year</strong>, but the overall <strong>female share stays
-                mostly stable</strong> 
+                The donut charts show DOC remains male-majority, but female representation trends slightly upward.
               </p>
 
               <div class="callout">
-                <strong>Key takeaways:</strong>
+                <strong>Key observations:</strong>
                 <ul>
-                  <li><strong>Female headcount grows:</strong> 515 → 542 → 580 → 596.</li>
-                  <li><strong>Female share is steady (~18%)</strong> with a small improvement in 2025 (18.5%).</li>
-                  <li><strong>Overall implication:</strong> progress is happening in counts, but representation changes slowly.</li>
+                  <li>Female share increases modestly over time and contribute to the 1/4 th population in 2025.</li>
+                  <li>The year-to-year change is gradual - suggesting steady progress rather than a one-time jump.</li>
                 </ul>
               </div>
 
+              <p class="muted">
+                Female representation is increasing in DOC.
+              </p>
             </div>
           </div>
-
-          
-
 
           <div class="minBtnRow">
             <button class="minBtn" type="button" data-close="body-female">Minimize ↑</button>
@@ -517,7 +505,7 @@
       </div>
 
 
-      <!-- Minority -->
+      <!-- MINORITY -->
       <div class="panel" id="panel-minority">
         <button class="panelHead" type="button" data-target="body-minority">
           <h3>Minority Analysis</h3>
@@ -525,33 +513,34 @@
         </button>
 
         <div class="panelBody" id="body-minority">
-          <!-- ✅ MOVED MINORITY CONTENT HERE -->
 
           <!-- SS1 -->
           <div class="grid">
             <div class="imgCard">
-              <img src="MSP_image2.png" alt="Bar chart: Minority headcount by race over time (MSP)" />
-              <div class="imgCaption">Minority headcount by race (2022–2025).</div>
+              <img src="DOC-image2.png" alt="Bar chart: Minority workforce by race and year (DOC)" />
+              <div class="imgCaption">Minority workforce by race and year (2022–2025).</div>
             </div>
 
             <div class="text">
-              <p><strong>1) Minority headcount by race (totals)</strong></p>
+              <p><strong>1) Minority growth by race (2022–2025)</strong></p>
               <p>
-                This bar chart explains the upward trajectory in minority representation observed earlier.
-                Across MSP, <strong>most racial groups show positive growth over time</strong>.
+                This chart breaks down minority headcount by race over time. It helps identify
+                <strong>which groups are driving overall minority growth</strong>.
               </p>
 
               <div class="callout">
-                <strong>What this suggests:</strong>
+                <strong>What we observe:</strong>
                 <ul>
-                  <li>Minority representation is increasing across multiple race categories.</li>
-                  <li>Compared to the broader EOPSS trend for <strong>Black</strong>, <strong>Hispanic</strong>, and <strong>Asian</strong>, MSP appears stronger.</li>
-                  <li>This raises a key question: <strong>why was there a sharp jump between 2023 and 2024</strong> that we did not see at the EOPSS level?</li>
+                  <li><strong>Hispanic</strong> representation is the largest and shows the strongest growth across years.</li>
+                  <li><strong>Black</strong> representation remains strong and increases steadily over time.</li>
+                  <li><strong>Asian</strong> stays relatively stable with small year-to-year changes.</li>
+                  <li>Smaller groups (<strong>NH/PI</strong>, <strong>AI/AN</strong>) remain low and largely flat.</li>
+                  <li><strong>Two or More Races</strong> remain constant.</li>
                 </ul>
               </div>
 
               <p class="muted" style="margin-top:12px;">
-                To explain the jump and check whether growth is consistent, we look at the year-over-year change.
+                Next, we check whether this minority growth is broad across the organization or concentrated in specific job categories.
               </p>
             </div>
           </div>
@@ -559,101 +548,61 @@
           <!-- SS2 -->
           <div class="grid" style="margin-top:18px;">
             <div class="text">
-              <p><strong>2) Year-over-year change (what drove the jump?)</strong></p>
-              <p>
-                This heatmap shows the <strong>net change compared to the previous year</strong> (not total headcount).
-                It answers: <strong>where did the 2023→2024 jump come from?</strong>
-              </p>
-              <p><strong>Answer:</strong> The 2023→2024 jump is primarily driven by Hispanic growth.</p>
+              <p><strong>2) Minority representation by EEO Job Category (year-by-year)</strong></p>
+
 
               <div class="callout">
-                <strong>What the heatmap reveals:</strong>
+                <strong>What this reveals:</strong>
                 <ul>
-                  <li><strong>Growth rate slows in the most recent year (2024→2025).</strong></li>
-                  <li><strong>Growth is not uniform</strong> across racial groups—some accelerate while others slow.</li>
-                  <li>The most broadly distributed (“most diverse”) growth occurred in <strong>2022→2023</strong>.</li>
-                </ul>
+                  <li><strong>Protective Service: Sworn</strong> dominates minority representation across all years.</li>
+                  <li><strong>Professionals</strong> is the next meaningful contributor and trends upward gradually.</li>
+                  <li>Most other categories remain comparatively small and show limited movement.</li>
+                  </ul>
               </div>
-
-              <p style="margin-top:12px;">
-                At a high level, shifts in growth patterns can reflect changes in outreach focus, engagement,
-                or pipeline effectiveness over time.
-              </p>
-
-              <p class="muted">
-                Key question: <strong>How can we combine best efforts</strong> to drive balanced, sustained minority growth?
-              </p>
             </div>
 
             <div class="imgCard">
-              <img src="MSP_image3.png" alt="Heatmap: Year-over-year change in minority headcount by race (MSP)" />
-              <div class="imgCaption">Year-over-year change in minority headcount by race (2023–2025).</div>
+              <img src="DOC-image3.png" alt="Bar chart: Minority representation by EEO job category year-by-year (DOC)" />
+              <div class="imgCaption">Minority representation by EEO job category (2022–2025).</div>
             </div>
           </div>
 
-          <!-- SS3 -->
+          <!-- SS3 + SS4 -->
           <div class="grid" style="margin-top:18px;">
             <div class="imgCard">
-              <img src="MSP_image4.png" alt="Grouped bar chart: Minority headcount by EEO job category (MSP)" />
-              <div class="imgCaption">Minority headcount by EEO job category (2022–2025).</div>
+              <img src="DOC-image4.png" alt="Horizontal bar chart: Protective Service Sworn 2025 minority job description distribution (DOC)" />
+              <div class="imgCaption">Job description distribution within Protective Service: Sworn (2025).</div>
             </div>
 
             <div class="text">
-              <p><strong>3) Where minority representation concentrates (EEO categories)</strong></p>
+              <p><strong>3) Role drill-down (Protective Service: Sworn, 2025)</strong></p>
               <p>
-                This view shows how minority representation is distributed across EEO job categories. It helps answer:
-                <strong>where minority representation concentrates</strong> and where additional outreach may be needed.
+                This drill-down shows which roles are driving minority totals inside the largest job category.
               </p>
 
               <div class="callout">
-                <strong>How to read this:</strong>
+                <strong>What we observe:</strong>
                 <ul>
-                  <li>Across all years, minority representation is dominated by: <strong>Protective Service: Sworn, Professionals, Officials and Administrators, Protective Service: Non-Sworn</strong>.</li>
-                  <li>Some categories show consistently low totals and limited change: <strong>Technicians, Service Maintenance, Office/Clerical</strong>.</li>
-                </ul>
+                  <li><strong>Correction Officer I</strong> contributes the overwhelming majority of minority headcount.</li></ul>
               </div>
+
+
             </div>
           </div>
 
-          <!-- SS4 -->
           <div class="grid" style="margin-top:18px;">
             <div class="text">
-              <p><strong>4) 2025 analysis of Protective Service: Sworn</strong></p>
-              <p style="margin-top:12px;">
-                The pie chart summarizes the minority composition by race inside
-                <strong>Protective Service: Sworn (2025)</strong>, while the bar chart highlights the
-                <strong>top roles</strong> contributing to that same category.
+              <p><strong>4) Minority composition (Protective Service: Sworn, 2025)</strong></p>
+              <p>
+                The composition view confirms that the same groups driving overall growth (Hispanic and Black) also dominate the most impactful category.
               </p>
 
-              <div class="callout">
-                <strong>What this adds beyond Section 3:</strong>
-                <ul>
-                  <li><strong>This drill-down</strong> shows <em>which roles</em> explain the category totals (especially in 2025).</li>
-                </ul>
-              </div>
 
-              
-
-              <div class="callout">
-                <strong>Quick note:</strong>
-                <ul>
-                  <li><strong>State Police Trooper</strong> is the largest role within <strong>Protective Service: Sworn</strong>.</li>
-                   <li><strong>Black and Hispanic</strong> drive the largest portion</strong>.</li>
-                </ul>
-              </div>
             </div>
 
-            <div>
-              <div class="imgCard">
-                <img src="MSP_image5.png" alt="Bar chart: Top job descriptions contributing to minority headcount in Protective Service: Sworn (2025)" />
-                <div class="imgCaption">Top roles driving minority headcount within Protective Service: Sworn (2025).</div>
-              </div>
-              <div class="imgCard" style="margin-bottom:14px;">
-                <img src="MSP_image6.png" alt="Pie chart: Minority composition by race in Protective Service: Sworn (2025)" />
-                <div class="imgCaption">Minority composition by race within Protective Service: Sworn (2025).</div>
-              </div>
-
-              
+            <div class="imgCard">
+              <img src="DOC-image5.png" alt="Pie chart: Minority composition for Protective Service Sworn 2025 (DOC)" />
+              <div class="imgCaption">Minority composition within Protective Service: Sworn (2025).</div>
             </div>
           </div>
 
@@ -661,9 +610,7 @@
             <button class="minBtn" type="button" data-close="body-minority">Minimize ↑</button>
           </div>
         </div>
-      </div>
-
-
+      </div>     
 
     </div>
   </main>
@@ -714,7 +661,7 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Lightbox zoom for images in .imgCard
+    // Lightbox zoom for images
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
 
