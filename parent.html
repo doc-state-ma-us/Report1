@@ -5,33 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Workforce Diversity Narrative (2022–2025)</title>
   <meta name="description" content="A scroll-based narrative of workforce diversity trends and Massachusetts population comparisons (2022–2025)." />
+
   <style>
     :root{
-  /* Background / surfaces (keep dark, but move toward your palette) */
-  --bg:#071522;       /* deep navy (new) */
-  --panel:#071b2a;    /* card base */
-  --panel2:#062033;   /* deeper card base */
+      /* Background / surfaces */
+      --bg:#071522;       /* deep navy */
+      --panel:#071b2a;    /* card base */
+      --panel2:#062033;   /* deeper card base */
 
-  /* Text */
-  --text:#e7eefc;
-  --muted:#a9b7d6;
-  --line:rgba(255,255,255,.10);
+      /* Text */
+      --text:#e7eefc;
+      --muted:#a9b7d6;
+      --line:rgba(255,255,255,.10);
 
-  /* Palette (your blues) */
-  --accent:#11c6ff;   /* primary highlight (brightest) */
-  --accent2:#1089b7;  /* secondary highlight */
-  --accent3:#045072;  /* deeper accent (optional) */
+      /* Palette */
+      --accent:#11c6ff;   /* primary highlight */
+      --accent2:#1089b7;  /* secondary highlight */
+      --accent3:#045072;  /* deeper accent */
 
-  /* Status colors (you don’t have in palette, so keep these) */
-  --warn:#ffcc66;
-  --bad:#ff6b6b;
+      /* Status colors */
+      --warn:#ffcc66;
+      --bad:#ff6b6b;
 
-  --radius:18px;
-  --shadow: 0 18px 55px rgba(0,0,0,.45);
-  --shadow2: 0 12px 30px rgba(0,0,0,.35);
-  --maxw: 1080px;
-}
-
+      --radius:18px;
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --shadow2: 0 12px 30px rgba(0,0,0,.35);
+      --maxw: 1080px;
+    }
 
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -41,9 +41,9 @@
       color:var(--text);
       background:
         radial-gradient(1100px 700px at 18% 0%, rgba(17,198,255,.20), transparent 60%),
-	  radial-gradient(900px 600px at 92% 10%, rgba(19,177,231,.14), transparent 58%),
-	  radial-gradient(1100px 700px at 50% 115%, rgba(16,137,183,.10), transparent 55%),
-	  linear-gradient(180deg, #071522 0%, #06101c 42%, #04080f 100%);
+        radial-gradient(900px 600px at 92% 10%, rgba(19,177,231,.14), transparent 58%),
+        radial-gradient(1100px 700px at 50% 115%, rgba(16,137,183,.10), transparent 55%),
+        linear-gradient(180deg, #071522 0%, #06101c 42%, #04080f 100%);
       overflow-x:hidden;
     }
 
@@ -51,7 +51,6 @@
     .progress{
       position:fixed; top:0; left:0; height:4px; width:0%;
       background: linear-gradient(90deg, #045072 0%, #1089b7 45%, #11c6ff 100%);
-
       z-index:9999;
       box-shadow:0 0 18px rgba(110,168,254,.45);
     }
@@ -74,8 +73,6 @@
       display:flex; align-items:center; gap:10px;
       min-width:220px;
     }
-
-    /* ✅ UPDATED: logo is now an image */
     .logo{
       width:34px;
       height:34px;
@@ -84,7 +81,6 @@
       display:block;
       box-shadow: 0 10px 30px rgba(110,168,254,.25);
     }
-
     .brand h1{
       font-size:14px; line-height:1.2; margin:0;
       letter-spacing:.2px;
@@ -98,6 +94,7 @@
       display:flex; gap:10px; flex-wrap:wrap;
       justify-content:flex-end;
     }
+
     .links a{
       color:var(--muted);
       text-decoration:none;
@@ -107,19 +104,65 @@
       border:1px solid transparent;
       transition: all .2s ease;
     }
-    .direction-highlight {
-        font-size: 16px;
-        line-height: 1.4;
-        margin-top: 6px;
-        color: var(--text);
-      }
-      .direction-highlight strong {
-        color: var(--accent);
-      }
     .links a:hover{
       color:var(--text);
       border-color:var(--line);
       background: rgba(255,255,255,.03);
+    }
+
+    /* CTA button */
+    .ctaWrap{
+      margin-top: 18px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .ctaBtn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.2px;
+      padding:12px 16px;
+      border-radius:999px;
+      color: var(--text);
+      border: 1px solid rgba(17,198,255,.45);
+      background: linear-gradient(90deg, rgba(4,80,114,.28), rgba(17,198,255,.18));
+      box-shadow: 0 10px 28px rgba(17,198,255,.18);
+      position:relative;
+      overflow:hidden;
+      transform: translateZ(0);
+    }
+
+    .ctaBtn:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(260px 120px at 25% 0%, rgba(17,198,255,.28), transparent 65%);
+      opacity:.9;
+      pointer-events:none;
+    }
+
+    .ctaBtn:hover{
+      border-color: rgba(17,198,255,.75);
+      box-shadow: 0 16px 36px rgba(17,198,255,.24);
+      transform: translateY(-1px);
+    }
+
+    .ctaDot{
+      width:10px; height:10px;
+      border-radius:999px;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(17,198,255,.85);
+      animation: pulse 1.25s ease-in-out infinite;
+    }
+
+    @keyframes pulse{
+      0%   { transform: scale(1);   opacity:.65; }
+      50%  { transform: scale(1.35); opacity:1;  }
+      100% { transform: scale(1);   opacity:.65; }
     }
 
     /* Hero */
@@ -325,7 +368,6 @@
       overflow:hidden;
     }
 
-        /* --- Normal image --- */
     .imgCard img{
       width:100%;
       height:auto;
@@ -334,45 +376,6 @@
       cursor: zoom-in;
     }
 
-    /* --- Lightbox overlay --- */
-    .lightbox{
-      position: fixed;
-      inset: 0;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 99999;
-
-      /* blur + dim */
-      background: rgba(0,0,0,.45);
-      backdrop-filter: blur(10px);
-    }
-
-    .lightbox.show{
-      display:flex;
-    }
-
-    .lightbox img{
-      max-width: min(92vw, 1200px);
-      max-height: 88vh;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      border-radius: 18px;
-      box-shadow: 0 30px 90px rgba(0,0,0,.7);
-      cursor: zoom-out;
-    }
-
-    .lightbox .hint{
-      position: fixed;
-      bottom: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 12px;
-      color: rgba(255,255,255,.75);
-    }
-
-
     .imgCaption{
       padding:10px 12px 12px;
       font-size:12px;
@@ -380,61 +383,13 @@
       border-top:1px solid var(--line);
       background: rgba(0,0,0,.15);
     }
-    
 
-    /* Insight cards */
-    .insights{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      margin-top: 12px;
+    /* Subtle divider line */
+    .divider{
+      height:1px;
+      background: var(--line);
+      margin: 10px 0 0;
     }
-    @media (max-width: 740px){
-      .insights{grid-template-columns:1fr}
-    }
-    .insight{
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:14px 14px 12px;
-      background: rgba(255,255,255,.03);
-      position:relative;
-      overflow:hidden;
-    }
-    .insight:before{
-      content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(480px 180px at 25% 0%, rgba(126,231,135,.10), transparent 62%);
-      pointer-events:none;
-    }
-    .insight h4{margin:0 0 8px 0; font-size:13px}
-    .insight p{margin:0; color:var(--muted); font-size:13px; line-height:1.55}
-    .tagRow{
-      margin-top:10px;
-      display:flex; flex-wrap:wrap; gap:8px;
-    }
-    .tag{
-      font-size:11px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      color:var(--text);
-      background: rgba(255,255,255,.02);
-    }
-    .tag.good{border-color: rgba(126,231,135,.28); background: rgba(126,231,135,.08)}
-    .tag.warn{border-color: rgba(255,204,102,.30); background: rgba(255,204,102,.08)}
-    .tag.bad{border-color: rgba(255,107,107,.28); background: rgba(255,107,107,.08)}
-
-    /* Footer */
-    footer{
-      max-width:var(--maxw);
-      margin:0 auto;
-      padding: 18px 18px 38px;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.6;
-    }
-    footer a{color:var(--muted)}
-    footer a:hover{color:var(--text)}
 
     /* Reveal animations */
     .reveal{
@@ -447,109 +402,81 @@
       transform: translateY(0);
     }
 
-    /* Subtle divider line */
-    .divider{
-      height:1px;
-      background: var(--line);
-      margin: 10px 0 0;
+    /* Lightbox overlay */
+    .lightbox{
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(10px);
     }
-	/* --- CTA button to Female report (END of page) --- */
-	.ctaWrap{
-	  margin-top: 18px;
-	  display:flex;
-	  justify-content:center;
-	}
-
-	.ctaBtn{
-	  display:inline-flex;
-	  align-items:center;
-	  gap:10px;
-	  text-decoration:none;
-	  font-size:13px;
-	  font-weight:700;
-	  letter-spacing:.2px;
-	  padding:12px 16px;
-	  border-radius:999px;
-	  color: var(--text);
-	  border: 1px solid rgba(17,198,255,.45);
-	  background: linear-gradient(90deg, rgba(4,80,114,.28), rgba(17,198,255,.18));
-	  box-shadow: 0 10px 28px rgba(17,198,255,.18);
-	  position:relative;
-	  overflow:hidden;
-	  transform: translateZ(0);
-	}
-
-	.ctaBtn:before{
-	  content:"";
-	  position:absolute;
-	  inset:-2px;
-	  background: radial-gradient(260px 120px at 25% 0%, rgba(17,198,255,.28), transparent 65%);
-	  opacity:.9;
-	  pointer-events:none;
-	}
-
-	.ctaBtn:hover{
-	  border-color: rgba(17,198,255,.75);
-	  box-shadow: 0 16px 36px rgba(17,198,255,.24);
-	  transform: translateY(-1px);
-	}
-
-	.ctaDot{
-	  width:10px; height:10px;
-	  border-radius:999px;
-	  background: var(--accent);
-	  box-shadow: 0 0 18px rgba(17,198,255,.85);
-	  animation: pulse 1.25s ease-in-out infinite;
-	}
-
-	@keyframes pulse{
-	  0%   { transform: scale(1);   opacity:.65; }
-	  50%  { transform: scale(1.35); opacity:1;  }
-	  100% { transform: scale(1);   opacity:.65; }
-	}
-
+    .lightbox.show{
+      display:flex;
+    }
+    .lightbox img{
+      max-width: min(92vw, 1200px);
+      max-height: 88vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 18px;
+      box-shadow: 0 30px 90px rgba(0,0,0,.7);
+      cursor: zoom-out;
+    }
+    .lightbox .hint{
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      color: rgba(255,255,255,.75);
+    }
   </style>
 </head>
+
 <body>
   <div class="progress" id="progress"></div>
 
   <header>
     <div class="nav">
       <div class="brand">
-        <!-- ✅ UPDATED: use your 1000x1000 logo.png here -->
         <img src="logo_parent.png" alt="Organization logo" class="logo" />
         <div>
-          <h1>EOPSS Diversity Workforce Narrative</h1>
-          <p>Quarter 4 from 2022–2025</p>
+          <h1>EOPSS Workforce Diversity Narrative</h1>
+          <p>Q4 (2022–2025)</p>
         </div>
       </div>
-	        <nav class="links" aria-label="Top navigation">
+
+      <nav class="links" aria-label="Top navigation">
         <a class="ctaBtn" href="index.html">
           <span class="ctaDot" aria-hidden="true"></span>
-          Back to Main Page
+          Back to main page
           <span aria-hidden="true">→</span>
         </a>
       </nav>
-
-
     </div>
   </header>
 
   <div class="hero">
     <div class="heroCard reveal">
-      <h2 class="heroTitle"> Headcount trends to equity gaps.</h2>
+      <h2 class="heroTitle">From headcount trends to equity gaps</h2>
+
       <p class="heroSub">
-        This data walks through a simple question: <strong>Has EOPSS workforce diversity changed? </strong>
-        This data sheet will evaluate overall trends,and analayze minority representation by race, then compare internal growth to
-        Massachusetts demographic changes to pinpoint where representation has reduced.
+        <strong>This narrative answers one question:</strong> has Secretariat workforce diversity changed?
+        We summarize overall trends, break down minority growth by race, and compare internal gains to
+        Massachusetts demographics to identify where progress is keeping pace-and where it is not.
       </p>
+
       <div class="chips" aria-label="Highlights">
         <span class="chip">Female ↑ steady</span>
         <span class="chip">Minority ↑ steady</span>
         <span class="chip">Veterans ↓ gradual</span>
       </div>
+
       <div class="divider"></div>
-      
     </div>
 
     <aside class="sideCard reveal" aria-label="Quick takeaways">
@@ -562,7 +489,7 @@
         <div class="kpi">
           <div class="label">Risk signal</div>
           <div class="value">Veterans ↓</div>
-          <div class="note">Slow decline</div>
+          <div class="note">Gradual decline</div>
         </div>
         <div class="kpi">
           <div class="label">Benchmark</div>
@@ -575,9 +502,9 @@
           <div class="note">Where pace lags</div>
         </div>
       </div>
+
       <div class="hint">
-        <strong>What you’ll see:</strong> internal increases aren’t always aligned with how the local labor market is shifting.
-        This helps target recruitment + retention strategies where they’ll matter most.
+        <strong>How to read this:</strong> each section shows the chart first, then a short set of takeaways.
       </div>
     </aside>
   </div>
@@ -586,48 +513,38 @@
     <!-- Section 1 -->
     <section id="s1" class="reveal">
       <div class="secHeader">
-        <h2>Section 1 - Overall Workforce Trends (Female, Minority, Veterans)</h2>
+        <h2>Section 1 - Overall workforce trends (female, minority, veterans)</h2>
         <span class="pill">Trend scan</span>
       </div>
 
       <div class="grid">
         <div class="imgCard">
-          <img src="chart1_overall_trends.png" alt="Line chart: Female, Minority, and Veteran headcount over time (2022–2024)" />
-          <div class="imgCaption">Overall headcount trends for Female, Minority, and Veteran employees (2022–2025).</div>
+          <img src="chart1_overall_trends.png" alt="Line chart: female, minority, and veteran headcount over time (2022–2025)" />
+          <div class="imgCaption">Overall headcount trends for female, minority, and veteran employees (2022–2025).</div>
         </div>
 
         <div class="text">
-          
-          <p><strong>How is our overall diversity changing over time?</strong></p>
+          <p class="muted"><strong>This chart shows</strong> direction of change across three groups over time.</p>
 
-          <p>Looking at the trends for Female employees, Minority employees, and Veterans, a clear picture emerges:</p>
           <div class="callout">
             <div class="row">
               <div class="badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18m9-9H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
               </div>
               <div>
-                <h3>What stands out</h3>
+                <h3>Key takeaways</h3>
                 <ul>
-                  <li><strong>Female representation</strong> has steadily increased every year.</li>
-                  <li><strong>Minority representation</strong> also shows a positive upward trend.</li>
-                  <li><strong>Veteran representation</strong> is slowly declining.</li>
+                  <li><strong>Female headcount:</strong> increasing.</li>
+                  <li><strong>Minority headcount:</strong> increasing.</li>
+                  <li><strong>Veteran headcount:</strong> declining.</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <p style="margin-top:12px">
-            This initial view gives us direction:
+            <strong>Takeaway:</strong> progress is strongest in female and minority representation; veteran engagement may need renewed focus.
           </p>
-
-          <p class="direction-highlight">
-            <strong>We are improving gender and minority diversity,</strong> but
-            <strong>veteran engagement may require renewed focus.</strong>
-          </p>
-
-
-          
         </div>
       </div>
     </section>
@@ -635,55 +552,37 @@
     <!-- Section 2 -->
     <section id="s2" class="reveal">
       <div class="secHeader">
-        <h2>Section 2 - Minority Representation in Secretariat</h2>
+        <h2>Section 2 - Minority representation in the Secretariat</h2>
         <span class="pill">Internal breakdown</span>
       </div>
 
       <div class="grid">
         <div class="text">
-          
-          <p>Among all racial groups, four categories consistently show meaningful headcount:</p>
-          <div class="insights">
-            <div class="insight">
-              <h4>Key groups</h4>
-              
-              <div class="tagRow">
-                <span class="tag">Black</span>
-                <span class="tag">Hispanic</span>
-                <span class="tag">Asian</span>
-                <span class="tag">Two or More</span>
-              </div>
-            </div>
-            <div class="insight">
-              <h4>Direction</h4>
-              <p>All four groups show positive year-over-year growth internally.</p>
-              <div class="tagRow">
-                <span class="tag good">YoY growth ↑</span>
-                
-              </div>
-            </div>
-          </div>
+          <p class="muted"><strong>This chart shows</strong> which race groups drive most minority headcount and how they change over time.</p>
 
-          <div class="callout" style="margin-top:14px">
+          <div class="callout" style="margin-top:12px">
             <div class="row">
-              <div class="badge" aria-hidden="true" style="background: rgba(255,204,102,.12); border-color: rgba(255,204,102,.22);">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M12 9v5m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="badge" aria-hidden="true" style="background: rgba(126,231,135,.12); border-color: rgba(126,231,135,.22);">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M3 17 9 11l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div>
-                <h3>Follow-up question</h3>
+                <h3>Key takeaways</h3>
                 <ul>
-                  <li><strong>Is there any factor leading to this increase?</li>
-				  <li><strong>Are these internal increases happening at a similar pace</strong> as the state’s population trends?</li>
+                  <li><strong>Four groups</strong> carry most minority headcount: <strong>Black, Hispanic, Asian, Two or More</strong>.</li>
+                  <li><strong>All four</strong> show year-over-year growth internally.</li>
+                  <li><strong>Next question:</strong> are Secretariat gains keeping pace with Massachusetts demographics?</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <p class="muted" style="margin-top:12px">To answer that, we compare our workforce growth to Massachusetts demographic data.</p>
+          <p class="muted" style="margin-top:12px">
+            Next, we compare workforce growth to Massachusetts demographics.
+          </p>
         </div>
 
         <div class="imgCard">
-          <img src="chart2_minority_race_bar.png" alt="Bar chart: Employee distribution by race and year (2022–2024)" />
+          <img src="chart2_minority_race_bar.png" alt="Bar chart: minority headcount by race across years (2022–2025)" />
           <div class="imgCaption">Minority headcount by race across 2022–2025.</div>
         </div>
       </div>
@@ -692,7 +591,7 @@
     <!-- Section 3 -->
     <section id="s3" class="reveal">
       <div class="secHeader">
-        <h2>Section 3 - Massachusetts Population Trend (Census.gov data)</h2>
+        <h2>Section 3 - Massachusetts population trend (Census.gov)</h2>
         <span class="pill">External benchmark</span>
       </div>
 
@@ -703,48 +602,25 @@
         </div>
 
         <div class="text">
-          <p>Census.gov has data till 2024. </p>
-          <p>We look at publicly available demographic estimates for Massachusetts till 2024.</p>
+          <p class="muted"><strong>This chart shows</strong> Census.gov data is available through 2024, so this benchmark covers 2022–2024.</p>
 
-          <p>Across all four highlighted groups, the statewide population is rising between 2022 and 2024:</p>
           <div class="callout">
             <div class="row">
-              <div class="badge" aria-hidden="true" style="background: rgba(126,231,135,.12); border-color: rgba(126,231,135,.22);">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M3 17 9 11l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="badge" aria-hidden="true" style="background: rgba(255,204,102,.12); border-color: rgba(255,204,102,.22);">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 9v5m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div>
-                <h3>Statewide growth</h3>
+                <h3>Key takeaways</h3>
                 <ul>
-                  <li><strong>Hispanic</strong> and <strong>Two or More Races</strong> groups show the highest population growth.</li>
-                  <li><strong>Black</strong> and <strong>Asian</strong> populations are growing at a moderate but steady pace.</li>
+                  <li><strong>All four groups</strong> grow statewide from 2022 to 2024.</li>
+                  <li><strong>Fastest statewide growth:</strong> Hispanic and Two or More Races.</li>
+                  <li><strong>Signal:</strong> Secretariat representation does not yet match the state’s demographic mix.</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <p style="margin-top:12px">This is where something interesting appears:</p>
-          <div class="insights">
-            <div class="insight">
-              <h4>Internal pattern</h4>
-              <p>In the Secretariat data, Black and Hispanic counts were almost equal.</p>
-              <div class="tagRow">
-                <span class="tag">Black ≈ Hispanic</span>
-              </div>
-            </div>
-            <div class="insight">
-              <h4>State reality</h4>
-              <p>In Massachusetts, Hispanic and Two or More Races populations are significantly larger than Black and Asian.</p>
-              <div class="tagRow">
-                <span class="tag warn">Mismatch</span>
-              </div>
-            </div>
-          </div>
-
-          <p style="margin-top:12px">
-            This mismatch signals opportunity:
-            <strong>our internal representation does not yet reflect the demographic mix of the state.</strong>
-          </p>
-          <p class="muted">To quantify this gap, we look at growth rates.</p>
+          <p class="muted" style="margin-top:12px">Next, we compare growth rates.</p>
         </div>
       </div>
     </section>
@@ -752,31 +628,15 @@
     <!-- Section 4 -->
     <section id="s4" class="reveal">
       <div class="secHeader">
-        <h2>Section 4 - Growth Rate Comparison: Secretariat vs. Massachusetts</h2>
+        <h2>Section 4 - Growth rate comparison: Secretariat vs. Massachusetts</h2>
         <span class="pill">Pace check</span>
       </div>
 
       <div class="grid">
         <div class="text">
-          <p>Now we compare % growth between 2022 and 2024 for both:</p>
-          <div class="insights">
-            <div class="insight">
-              <h4>Secretariat dataset</h4>
-              <p>How quickly internal headcount is changing by race.</p>
-              <div class="tagRow">
-                <span class="tag">Internal growth</span>
-              </div>
-            </div>
-            <div class="insight">
-              <h4>MA demographic dataset</h4>
-              <p>How quickly the potential labor market is changing statewide.</p>
-              <div class="tagRow">
-                <span class="tag">Population growth</span>
-              </div>
-            </div>
-          </div>
+          <p class="muted"><strong>This chart shows</strong> percent growth (2022–2024) for Secretariat headcount vs. statewide population.</p>
 
-          <div class="callout" style="margin-top:14px">
+          <div class="callout" style="margin-top:12px">
             <div class="row">
               <div class="badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5m0 14h16M8 15l2-3 3 2 4-6 3 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -784,23 +644,23 @@
               <div>
                 <h3>Key comparison (2022 → 2024)</h3>
                 <ul>
-                  <li><strong>Asian</strong>: Massachusetts 10.20% vs Secretariat 17.53% <span style="color:var(--accent2)"><strong>✔ faster than population</strong></span></li>
-                  <li><strong>Hispanic</strong>: Massachusetts 9.63% vs Secretariat 16.75% <span style="color:var(--accent2)"><strong>✔ faster than population</strong></span></li>
-                  <li><strong>Black</strong>: Massachusetts 10.02% vs Secretariat 6.53% <span style="color:var(--warn)"><strong>⚠ lagging</strong></span></li>
-                  <li><strong>Two or More Races</strong>: Massachusetts 16.31% vs Secretariat 12.24% <span style="color:var(--warn)"><strong>⚠ lagging</strong></span></li>
+                  <li><strong>Asian:</strong> Massachusetts 10.20% vs Secretariat 17.53% <span style="color:var(--accent2)"><strong>✔ ahead of pace</strong></span></li>
+                  <li><strong>Hispanic:</strong> Massachusetts 9.63% vs Secretariat 16.75% <span style="color:var(--accent2)"><strong>✔ ahead of pace</strong></span></li>
+                  <li><strong>Black:</strong> Massachusetts 10.02% vs Secretariat 6.53% <span style="color:var(--warn)"><strong>⚠ behind pace</strong></span></li>
+                  <li><strong>Two or More Races:</strong> Massachusetts 16.31% vs Secretariat 12.24% <span style="color:var(--warn)"><strong>⚠ behind pace</strong></span></li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <p class="muted" style="margin-top:12px">
-            This comparison clarifies exactly where representation gaps exist: not only in counts, but in growth pace.
+          <p style="margin-top:12px">
+            <strong>Takeaway:</strong> gaps are not only in counts, but in growth pace.
           </p>
         </div>
 
         <div class="imgCard">
-          <img src="chart4_growth_comparison.png" alt="Bar chart: Secretariat vs Massachusetts population growth by race (2022–2024)" />
-          <div class="imgCaption">Growth rate comparison between internal headcount and Massachusetts population (2022–2024).</div>
+          <img src="chart4_growth_comparison.png" alt="Bar chart: Secretariat vs. Massachusetts population growth by race (2022–2024)" />
+          <div class="imgCaption">Growth rate comparison between Secretariat headcount and Massachusetts population (2022–2024).</div>
         </div>
       </div>
     </section>
@@ -808,86 +668,45 @@
     <!-- Section 5 -->
     <section id="s5" class="reveal">
       <div class="secHeader">
-        <h2>Section 5 - Final Interpretation & Insights</h2>
+        <h2>Section 5 - Final interpretation</h2>
         <span class="pill">So what?</span>
       </div>
 
       <div class="text">
-        <div class="insights">
-          <div class="insight">
-            <h4>What the data reveals</h4>
-            <p>
-              <strong>Asian</strong> and <strong>Hispanic</strong> employees are not only increasing - they are growing faster than Massachusetts trends.
-              <br/><br/>
-              <strong>Black</strong> and <strong>Two or More Races</strong> groups, however, are growing slower than the state’s population growth.
-              This indicates underrepresentation in <strong>growth pace</strong> relative to community demographics.
-            </p>
-            <div class="tagRow">
-              <span class="tag good">Asian: pace ahead</span>
-              <span class="tag good">Hispanic: pace ahead</span>
-              <span class="tag warn">Black: pace behind</span>
-              <span class="tag warn">Two+: pace behind</span>
-            </div>
-          </div>
-
-          <div class="insight">
-            <h4>Key equity insight</h4>
-            <p>
-              Hispanic and Two or More Races groups hold <strong>~1.5× higher population share</strong> in Massachusetts compared to Black and Asian populations.
-              This means these two groups have the largest more growth potential in the labor market.
-            </p>
-            <div class="tagRow">
-              <span class="tag">Labor market signal</span>
-              <span class="tag">Future talent pool</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="callout" style="margin-top:14px">
+        <div class="callout">
           <div class="row">
             <div class="badge" aria-hidden="true" style="background: rgba(110,168,254,.12); border-color: rgba(110,168,254,.22);">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
-              <h3>Overall story</h3>
+              <h3>Key takeaways</h3>
               <ul>
-                <li>Our Secretariat is making progress in minority representation.</li>
-                <li>But the pace of growth is not consistent across groups.</li>
-                <li>To stay aligned, strengthening recruitment and retention strategies for
-                  <strong>Black employees</strong> and <strong>Two or More Races employees</strong> will be essential going forward.</li>
+                <li><strong>Ahead of pace:</strong> Asian and Hispanic.</li>
+                <li><strong>Behind pace:</strong> Black and Two or More Races.</li>
+                <li><strong>Action:</strong> prioritize recruitment and retention for Black and Two or More Races employees to close the growth gap.</li>
               </ul>
             </div>
           </div>
         </div>
-		<div class="ctaWrap">
-		  <a class="ctaBtn" href="female.html" target="_blank" rel="noopener">
-			<span class="ctaDot" aria-hidden="true"></span>
-			View Female Workforce Report
-			<span aria-hidden="true">→</span>
-		  </a>
-		</div>
 
-        
+        <div class="ctaWrap">
+          <a class="ctaBtn" href="female.html" target="_blank" rel="noopener">
+            <span class="ctaDot" aria-hidden="true"></span>
+            View the female workforce report
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-  <img id="lightboxImg" alt="Expanded chart" />
-  <div class="hint">Click anywhere (or press ESC) to close</div>
-</div>
-  <script>
-    // Smooth scroll for nav links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href');
-        const el = document.querySelector(id);
-        if (!el) return;
-        e.preventDefault();
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.replaceState(null, "", id);
-      });
-    });
 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img id="lightboxImg" alt="Expanded chart" />
+    <div class="hint">Click anywhere (or press ESC) to close</div>
+  </div>
+
+  <script>
     // Top progress bar
     const progress = document.getElementById('progress');
     function updateProgress(){
@@ -908,36 +727,34 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    // ---- Click-to-zoom for all charts inside .imgCard ----
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
 
-document.querySelectorAll('.imgCard img').forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightbox.classList.add('show');
-    lightbox.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden'; // prevent scroll behind
-  });
-});
+    // Click-to-zoom for all charts inside .imgCard
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
 
-function closeLightbox(){
-  lightbox.classList.remove('show');
-  lightbox.setAttribute('aria-hidden', 'true');
-  lightboxImg.src = '';
-  document.body.style.overflow = '';
-}
+    document.querySelectorAll('.imgCard img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('show');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
 
-lightbox.addEventListener('click', closeLightbox);
+    function closeLightbox(){
+      lightbox.classList.remove('show');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightbox.classList.contains('show')) {
-    closeLightbox();
-  }
-});
+    lightbox.addEventListener('click', closeLightbox);
 
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('show')) {
+        closeLightbox();
+      }
+    });
   </script>
-
-
 </body>
 </html>
